@@ -54,12 +54,12 @@ function Hangman() {
 
     //create a victory function for split the newWord into array & check all the elements are exists in the guessed object,if all the char is exist return true else return false
     const victory = () => {
-        return newWord.split('').every(i => guessed.has(i)) 
+        return newWord.split('').every(i => guessed.has(i))
     }
     return (
         <div className='hangman-main d-flex align-items-center justify-content-center min-vh-100'>
 
-            {/* 17.if wrongGuess >= maxGuess game over model box displaying */}
+                {/* 17.if wrongGuess >= maxGuess game over model box displaying */ }
             {
                 wrongGuess >= maxGuess &&
                 <div className="game-model">
@@ -68,7 +68,7 @@ function Hangman() {
                         <h5>The correct word was: <b>{newWord.toUpperCase()}</b></h5>
                         <h4 className='text-danger'>Game Over!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
-                        <Link to={'/'} style={{textDecoration:"none"}}><button className='play-again mt-2'>Home</button></Link>
+                        <Link to={'/'} style={{ textDecoration: "none" }}><button className='play-again mt-2'>Home</button></Link>
                         {/* 18. call randomWord function in inClick  */}
                     </div>
                 </div>
@@ -82,7 +82,7 @@ function Hangman() {
                         <h4>Word: {newWord.toUpperCase()}</h4>
                         <h4 className='text-success'>You Won...!</h4>
                         <button onClick={randomWord} className='play-again mt-2'>Play Again</button>
-                        <Link to={'/'} style={{textDecoration:"none"}}><button className='play-again mt-2'>Home</button></Link>
+                        <Link to={'/'} style={{ textDecoration: "none" }}><button className='play-again mt-2'>Home</button></Link>
                     </div>
                 </div>
             }
@@ -100,7 +100,7 @@ function Hangman() {
                     <Col>
                         <div className='game-box'>
                             <ul className='word-display d-flex d-flex align-items-center justify-content-center mt-5 p-0'>
-                                {wordDisplay()} 
+                                {wordDisplay()}
                                 {/* 13.wordDisplay() function call */}
                             </ul>
                             <h4 className='hint-text'>
@@ -125,6 +125,7 @@ function Hangman() {
             </Container>
 
         </div>
+
     )
 }
 
